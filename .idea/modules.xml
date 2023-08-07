@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fisa2Problema1/Fisa2Problema1.iml" filepath="$PROJECT_DIR$/Fisa2Problema1/Fisa2Problema1.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaPOB.iml" filepath="$PROJECT_DIR$/JavaPOB.iml" />
     </modules>
   </component>
