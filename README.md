@@ -1,4 +1,4 @@
-Problema 3. Status: In Lucru.
+Problema 3. Status: In Lucru. Vezi: f2p3
 
 Se considera un fisier text “in.txt” care poate contine diverse tipuri de obiecte dintr-o
 farmacie, de tip medicamente/dieta/dispozitiveMedicale – momentan sunt 3 tipuri definite,
@@ -24,14 +24,14 @@ b. Sa se sorteze toate medicamentele dupa ID (prima componenta)
 c. Sa se verifice daca exista dispozitve medicale unice in fisierul initial.
 
 
-Problema 2. Status: Finalizat.
+Problema 2. Status: Finalizat. Vezi: f2p2
 
 Sa se creeze o clasa Persoana care are doua atribute: nume (String) si cod numeric personal
 (String). Fiecare persoana are un cod numeric personal unic.
 Sa se scrie o metoda care returneaza intersectia a doua colectii de tip Set care contin obiecte
 de tip Persoana.
 
-Problema 1. Status: Finalizat.
+Problema 1. Status: Finalizat. Vezi: f2p1
 
 O clasa Carte este caracterizata de Titlu, Autor (String-uri) si numar de pagini (int).
 Se considera ca doua carti sunt identice (egale) daca au acelasi autor, acelasi titlu si acelasi
