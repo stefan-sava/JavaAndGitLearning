@@ -2,7 +2,7 @@ Problema 3. Status: In Lucru.
 
 Se considera un fisier text “in.txt” care poate contine diverse tipuri de obiecte dintr-o
 farmacie, de tip medicamente/dieta/dispozitiveMedicale – momentan sunt 3 tipuri definite,
-dar pot aparea mai multe tipologii. Toate tipurole de obiecte care se gasesc in farmacie sunt
+dar pot aparea mai multe tipologii. Toate tipurile de obiecte care se gasesc in farmacie sunt
 intr-un fisier “produse.txt”.
 Fisierul in.txt arata de forma
 
