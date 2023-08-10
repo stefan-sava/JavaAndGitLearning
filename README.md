@@ -1,4 +1,4 @@
-Problema 3. Status: In Lucru. Vezi: f2p3
+[b]Problema 3. Status: In Lucru. Vezi: f2p3[/b]
 
 Se considera un fisier text “in.txt” care poate contine diverse tipuri de obiecte dintr-o
 farmacie, de tip medicamente/dieta/dispozitiveMedicale – momentan sunt 3 tipuri definite,
