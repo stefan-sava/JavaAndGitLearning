@@ -4,22 +4,16 @@ import java.util.regex.*;
 
 public class Main {
 
-    public static void gasireID(String line){
+/*    public static String gasireID(String line){
 
         Pattern pattern = Pattern.compile("(.*?)\\*");
         Matcher matcher = pattern.matcher(line);
-
-        if(matcher.find()) {
-
-            System.out.println(matcher.group(1));
-
-        }
-
+        if(matcher.find())
+            return matcher.group(1);
     }
+ */
 
-    // Inutil, nu era necesar gasirea in in.txt
-
- /*   public static String gasireTipuriObiecte(String line){
+      public static String gasireTipuriObiecte(String line){
 
         Pattern pattern = Pattern.compile("\\*(.*?)\\*");
         Matcher matcher = pattern.matcher(line);
@@ -27,20 +21,43 @@ public class Main {
         if (matcher.find()) {
             match = matcher.group(1);
         }
-
         return match;
-    }*/
+    }
 
     public static void main(String[] args){
 
-        File input = new File("C:\\Users\\stefa\\IdeaProjects\\JavaPOB\\f2p3\\src\\in.txt");
+        List<String> med = new ArrayList<>();
+        med.add("medicament");
+        List<String> dispMed = new ArrayList<>();
+        dispMed.add("dispozitiveMedicale");
+        List<String> die = new ArrayList<>();
+        die.add("dieta");
+        List<String> list= new ArrayList<String>();
 
-        try (Scanner myReader = new Scanner(input)) {
+
+        File inputFromIN = new File("C:\\Users\\stefa\\IdeaProjects\\JavaPOB\\f2p3\\src\\in.txt");
+        File inputFromProduse = new File("C:\\Users\\stefa\\IdeaProjects\\JavaPOB\\f2p3\\src\\produse.txt");
+
+
+        try (Scanner myReader = new Scanner(inputFromIN)) {
 
                     while(myReader.hasNext()){
 
                         String dataIN = myReader.nextLine();
-                        gasireID(dataIN);
+                        list.add(dataIN);
+                        String tipMedicament = gasireTipuriObiecte(dataIN);
+
+                        if(tipMedicament.equalsIgnoreCase(med.get(0))){
+                            med.add(dataIN);
+
+                        }
+                        else if (tipMedicament.equalsIgnoreCase(dispMed.get(0))) {
+                            dispMed.add(dataIN);
+                        }
+
+                        else if (tipMedicament.equalsIgnoreCase(die.get(0))){
+                            die.add(dataIN);
+                        }
 
                     }
 
@@ -51,8 +68,6 @@ public class Main {
     }
 }
 
-//TODO Fisierul produse.txt era deja dat de catre problema, trebuie modificat o mare parte din cod. Nu este nevoie de un fisier de iesire creat.
-//TODO Trebuie citite toate produsele de in.txt si bagate intr-o colectie.
-//TODO Trebuie creata o lista pentru fiecare din produsele din fisierul.txt si cele din in.txt bagate in el.
+
 //TODO Sortare dupa ID (nu specifica unde deci o sa fie facuta la alegere)
 //TODO Trebuie verificat daca exista dispozitive medicale unice.
