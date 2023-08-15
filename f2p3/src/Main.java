@@ -60,6 +60,8 @@ public class Main {
                         }
 
                     }
+                    List<String> dispMedSortate = new ArrayList<>();
+                    dispMedSortate.retainAll(dispMed);
 
 
         } catch (FileNotFoundException e) {
@@ -67,7 +69,3 @@ public class Main {
         }
     }
 }
-
-
-//TODO Sortare dupa ID (nu specifica unde deci o sa fie facuta la alegere)
-//TODO Trebuie verificat daca exista dispozitive medicale unice.
