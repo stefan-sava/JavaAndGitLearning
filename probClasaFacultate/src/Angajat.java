@@ -4,8 +4,8 @@ public class Angajat extends Persoana{
     public Angajat(String nume, String prenume, String adresa, String email) {
         super(nume, prenume, adresa, email);
     }
-    private int Salariu;
-    private int Vechime;
+    int Salariu;
+    int Vechime;
 
     public Angajat(String nume, String prenume, String adresa, String email, int salariu, int vechime) {
         super(nume, prenume, adresa, email);
@@ -44,7 +44,12 @@ public class Angajat extends Persoana{
 
     @Override
     public String toString() {
-        return "Angajat{" +
+        return "Persoana{" +
+                "Nume='" + Nume + '\'' +
+                ", Prenume='" + Prenume + '\'' +
+                ", Adresa='" + Adresa + '\'' +
+                ", Email='" + Email + '\'' +
+                "} " + "Angajat{" +
                 "Salariu=" + Salariu +
                 ", Vechime=" + Vechime +
                 "ani}";

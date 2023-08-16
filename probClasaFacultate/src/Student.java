@@ -9,10 +9,10 @@ public class Student extends Persoana{
     private int NrMatricol;
     private int AnStudiu;
     private String Specializare;
-    private int MedieAdmitere;
+    private float MedieAdmitere;
     private List NotaCursuri;
 
-    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, int medieAdmitere, List notaCursuri) {
+    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, float medieAdmitere, List notaCursuri) {
         super(nume, prenume, adresa, email);
         NrMatricol = nrMatricol;
         AnStudiu = anStudiu;
@@ -45,11 +45,11 @@ public class Student extends Persoana{
         Specializare = specializare;
     }
 
-    public int getMedieAdmitere() {
+    public float getMedieAdmitere() {
         return MedieAdmitere;
     }
 
-    public void setMedieAdmitere(int medieAdmitere) {
+    public void setMedieAdmitere(float medieAdmitere) {
         MedieAdmitere = medieAdmitere;
     }
 
@@ -76,7 +76,12 @@ public class Student extends Persoana{
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Persoana{" +
+                "Nume='" + Nume + '\'' +
+                ", Prenume='" + Prenume + '\'' +
+                ", Adresa='" + Adresa + '\'' +
+                ", Email='" + Email + '\'' +
+                "} " + "Student{" +
                 "NrMatricol=" + NrMatricol +
                 ", AnStudiu=" + AnStudiu +
                 ", Specializare='" + Specializare + '\'' +

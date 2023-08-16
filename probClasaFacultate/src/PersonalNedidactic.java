@@ -34,7 +34,15 @@ public class PersonalNedidactic extends Angajat{
 
     @Override
     public String toString() {
-        return "PersonalNedidactic{" +
+        return "Persoana{" +
+                "Nume='" + Nume + '\'' +
+                ", Prenume='" + Prenume + '\'' +
+                ", Adresa='" + Adresa + '\'' +
+                ", Email='" + Email + '\'' +
+                "} " + "Angajat{" +
+                "Salariu=" + Salariu +
+                ", Vechime=" + Vechime +
+                "ani} " + "PersonalNedidactic{" +
                 "Functie='" + Functie + '\'' +
                 '}';
     }

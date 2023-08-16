@@ -34,7 +34,15 @@ public class CadruDidactic extends Angajat{
 
     @Override
     public String toString() {
-        return "CadruDidactic{" +
+        return "Persoana{" +
+                "Nume='" + Nume + '\'' +
+                ", Prenume='" + Prenume + '\'' +
+                ", Adresa='" + Adresa + '\'' +
+                ", Email='" + Email + '\'' +
+                "} " + "Angajat{" +
+                "Salariu=" + Salariu +
+                ", Vechime=" + Vechime +
+                "ani} " + "CadruDidactic{" +
                 "Titulatura='" + Titulatura + '\'' +
                 '}';
     }

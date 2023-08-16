@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class Persoana {
-    private String Nume;
-    private String Prenume;
-    private String Adresa;
-    private String Email;
+    String Nume;
+    String Prenume;
+    String Adresa;
+    String Email;
 
     public Persoana(String nume, String prenume, String adresa, String email) {
         Nume = nume;
