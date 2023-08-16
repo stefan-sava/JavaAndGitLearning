@@ -47,3 +47,4 @@ public class Carte {
         return Objects.hash(getTitlu(), getAutor(), getNrPag());
     }
 }
+//
