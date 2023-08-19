@@ -1,49 +1,21 @@
 import java.util.Objects;
 
-public class Persoana {
-    String Nume;
-    String Prenume;
-    String Adresa;
-    String Email;
+public abstract class Persoana {
+    public abstract String getNume();
 
-    public Persoana(String nume, String prenume, String adresa, String email) {
-        Nume = nume;
-        Prenume = prenume;
-        Adresa = adresa;
-        Email = email;
-    }
+    public abstract void setNume(String nume);
 
-    public String getNume() {
-        return Nume;
-    }
+    public abstract String getPrenume();
 
-    public void setNume(String nume) {
-        Nume = nume;
-    }
+    public abstract void setPrenume(String prenume);
 
-    public String getPrenume() {
-        return Prenume;
-    }
+    public abstract String getAdresa();
 
-    public void setPrenume(String prenume) {
-        Prenume = prenume;
-    }
+    public abstract void setAdresa(String adresa);
 
-    public String getAdresa() {
-        return Adresa;
-    }
+    public abstract String getEmail();
 
-    public void setAdresa(String adresa) {
-        Adresa = adresa;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
+    public abstract void setEmail(String email);
 
     @Override
     public boolean equals(Object o) {
@@ -52,19 +24,5 @@ public class Persoana {
         return Objects.equals(getNume(), persoana.getNume()) && Objects.equals(getPrenume(), persoana.getPrenume()) && Objects.equals(getAdresa(), persoana.getAdresa()) && Objects.equals(getEmail(), persoana.getEmail());
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNume(), getPrenume(), getAdresa(), getEmail());
-    }
-
-    @Override
-    public String toString() {
-        return "Persoana{" +
-                "Nume='" + Nume + '\'' +
-                ", Prenume='" + Prenume + '\'' +
-                ", Adresa='" + Adresa + '\'' +
-                ", Email='" + Email + '\'' +
-                '}';
-    }
 
 }

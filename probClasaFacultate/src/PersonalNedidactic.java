@@ -1,14 +1,82 @@
 import java.util.Objects;
 
 public class PersonalNedidactic extends Angajat{
-    public PersonalNedidactic(String nume, String prenume, String adresa, String email, int salariu, int vechime) {
-        super(nume, prenume, adresa, email, salariu, vechime);
-    }
+    private String Nume;
+    private String Prenume;
+    private String Adresa;
+    private String Email;
+    private int Salariu;
+    private int Vechime;
     private String Functie;
 
     public PersonalNedidactic(String nume, String prenume, String adresa, String email, int salariu, int vechime, String functie) {
-        super(nume, prenume, adresa, email, salariu, vechime);
+        Nume = nume;
+        Prenume = prenume;
+        Adresa = adresa;
+        Email = email;
+        Salariu = salariu;
+        Vechime = vechime;
         Functie = functie;
+    }
+
+    @Override
+    public int getSalariu() {
+        return 0;
+    }
+
+    @Override
+    public void setSalariu(int Salariu) {
+
+    }
+
+    @Override
+    public int getVechime() {
+        return 0;
+    }
+
+    @Override
+    public void setVechime(int Vechime) {
+
+    }
+
+    @Override
+    public String getNume() {
+        return null;
+    }
+
+    @Override
+    public void setNume(String nume) {
+
+    }
+
+    @Override
+    public String getPrenume() {
+        return null;
+    }
+
+    @Override
+    public void setPrenume(String prenume) {
+
+    }
+
+    @Override
+    public String getAdresa() {
+        return null;
+    }
+
+    @Override
+    public void setAdresa(String adresa) {
+
+    }
+
+    @Override
+    public String getEmail() {
+        return null;
+    }
+
+    @Override
+    public void setEmail(String email) {
+
     }
 
     public String getFunctie() {
@@ -17,33 +85,5 @@ public class PersonalNedidactic extends Angajat{
 
     public void setFunctie(String functie) {
         Functie = functie;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof PersonalNedidactic that)) return false;
-        if (!super.equals(o)) return false;
-        return Objects.equals(getFunctie(), that.getFunctie());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), getFunctie());
-    }
-
-    @Override
-    public String toString() {
-        return "Persoana{" +
-                "Nume='" + Nume + '\'' +
-                ", Prenume='" + Prenume + '\'' +
-                ", Adresa='" + Adresa + '\'' +
-                ", Email='" + Email + '\'' +
-                "} " + "Angajat{" +
-                "Salariu=" + Salariu +
-                ", Vechime=" + Vechime +
-                "ani} " + "PersonalNedidactic{" +
-                "Functie='" + Functie + '\'' +
-                '}';
     }
 }

@@ -2,23 +2,66 @@ import java.util.List;
 import java.util.Objects;
 
 public class Student extends Persoana{
-    public Student(String nume, String prenume, String adresa, String email) {
-        super(nume, prenume, adresa, email);
-    }
-
+    private String Nume;
+    private String Prenume;
+    private String Adresa;
+    private String Email;
     private int NrMatricol;
     private int AnStudiu;
     private String Specializare;
     private float MedieAdmitere;
-    private List NotaCursuri;
+    private List<NotaCurs> NotaCursuri;
 
-    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, float medieAdmitere, List notaCursuri) {
-        super(nume, prenume, adresa, email);
+    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, float medieAdmitere, List<NotaCurs> notaCursuri) {
+        Nume = nume;
+        Prenume = prenume;
+        Adresa = adresa;
+        Email = email;
         NrMatricol = nrMatricol;
         AnStudiu = anStudiu;
         Specializare = specializare;
         MedieAdmitere = medieAdmitere;
         NotaCursuri = notaCursuri;
+    }
+
+    @Override
+    public String getNume() {
+        return Nume;
+    }
+
+    @Override
+    public void setNume(String nume) {
+        Nume = nume;
+    }
+
+    @Override
+    public String getPrenume() {
+        return Prenume;
+    }
+
+    @Override
+    public void setPrenume(String prenume) {
+        Prenume = prenume;
+    }
+
+    @Override
+    public String getAdresa() {
+        return Adresa;
+    }
+
+    @Override
+    public void setAdresa(String adresa) {
+        Adresa = adresa;
+    }
+
+    @Override
+    public String getEmail() {
+        return Email;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        Email = email;
     }
 
     public int getNrMatricol() {
@@ -53,12 +96,27 @@ public class Student extends Persoana{
         MedieAdmitere = medieAdmitere;
     }
 
-    public List getNotaCursuri() {
+    public List<NotaCurs> getNotaCursuri() {
         return NotaCursuri;
     }
 
-    public void setNotaCursuri(List notaCursuri) {
+    public void setNotaCursuri(List<NotaCurs> notaCursuri) {
         NotaCursuri = notaCursuri;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "Nume='" + Nume + '\'' +
+                ", Prenume='" + Prenume + '\'' +
+                ", Adresa='" + Adresa + '\'' +
+                ", Email='" + Email + '\'' +
+                ", NrMatricol=" + NrMatricol +
+                ", AnStudiu=" + AnStudiu +
+                ", Specializare='" + Specializare + '\'' +
+                ", MedieAdmitere=" + MedieAdmitere +
+                ", NotaCursuri=" + NotaCursuri +
+                '}';
     }
 
     @Override
@@ -66,27 +124,11 @@ public class Student extends Persoana{
         if (this == o) return true;
         if (!(o instanceof Student student)) return false;
         if (!super.equals(o)) return false;
-        return getNrMatricol() == student.getNrMatricol() && getAnStudiu() == student.getAnStudiu() && getMedieAdmitere() == student.getMedieAdmitere() && Objects.equals(getSpecializare(), student.getSpecializare()) && Objects.equals(getNotaCursuri(), student.getNotaCursuri());
+        return getNrMatricol() == student.getNrMatricol() && getAnStudiu() == student.getAnStudiu() && Float.compare(student.getMedieAdmitere(), getMedieAdmitere()) == 0 && Objects.equals(getNume(), student.getNume()) && Objects.equals(getPrenume(), student.getPrenume()) && Objects.equals(getAdresa(), student.getAdresa()) && Objects.equals(getEmail(), student.getEmail()) && Objects.equals(getSpecializare(), student.getSpecializare()) && Objects.equals(getNotaCursuri(), student.getNotaCursuri());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getNrMatricol(), getAnStudiu(), getSpecializare(), getMedieAdmitere(), getNotaCursuri());
-    }
-
-    @Override
-    public String toString() {
-        return "Persoana{" +
-                "Nume='" + Nume + '\'' +
-                ", Prenume='" + Prenume + '\'' +
-                ", Adresa='" + Adresa + '\'' +
-                ", Email='" + Email + '\'' +
-                "} " + "Student{" +
-                "NrMatricol=" + NrMatricol +
-                ", AnStudiu=" + AnStudiu +
-                ", Specializare='" + Specializare + '\'' +
-                ", MedieAdmitere=" + MedieAdmitere +
-                ", NotaCursuri=" + NotaCursuri +
-                '}';
+        return Objects.hash(getNume(), getPrenume(), getAdresa(), getEmail(), getNrMatricol(), getAnStudiu(), getSpecializare(), getMedieAdmitere(), getNotaCursuri());
     }
 }
