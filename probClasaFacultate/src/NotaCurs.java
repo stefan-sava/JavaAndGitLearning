@@ -2,9 +2,9 @@ import java.util.Objects;
 
 public class NotaCurs{
     private int CursId;
-    private int Nota;
+    private double Nota;
 
-    public NotaCurs(int cursId, int nota) {
+    public NotaCurs(int cursId, double nota) {
         CursId = cursId;
         Nota = nota;
     }
@@ -17,11 +17,11 @@ public class NotaCurs{
         CursId = cursId;
     }
 
-    public int getNota() {
+    public double getNota() {
         return Nota;
     }
 
-    public void setNota(int nota) {
+    public void setNota(double nota) {
         Nota = nota;
     }
 

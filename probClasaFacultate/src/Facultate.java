@@ -5,14 +5,16 @@ public class Facultate {
     private String Denumire;
     String Adresa, Email;
     private List Contact;
-    private List<Specializare> Specializari;
-    private List<Angajat> Angajati;
-    private List<Student> Studenti;
+    List<Specializare> Specializari;
+    List<Angajat> Angajati;
+    List<Student> Studenti;
 
-    public Facultate(String denumire, List contact, List specializari, List angajati, List studenti) {
+    public Facultate(String denumire, String adresa, String email, List specializari, List angajati, List studenti) {
         Denumire = denumire;
-        Contact.add(Adresa);
-        Contact.add(Email);
+        Adresa = adresa;
+        Email = Email;
+        Contact.add(email);
+        Contact.add(adresa);
         Specializari = specializari;
         Angajati = angajati;
         Studenti = studenti;
@@ -60,16 +62,20 @@ public class Facultate {
 
     @Override
     public String toString() {
-        return "Facultate{" +
-                "Denumire='" + Denumire + '\'' +
-                ", Contact='" + Contact + '\'' +
-                ", Specializari='" + Specializari + '\'' +
-                ", Angajati=" + Angajati +
-                ", Studenti=" + Studenti +
-                '}';
+        StringBuilder specializariStr = new StringBuilder("Specializari:\n");
+        for (Specializare specializare : Specializari) {
+            specializariStr.append(specializare.toString()).append("\n");
+        }
+
+        return "Facultate: " + Denumire + "\nAdresa: " + Adresa + "\nEmail: " + Email + "\n" +
+                specializariStr.toString();
     }
 
     //Pentru a adauga la facultate
+
+    public void adaugaContact(Specializare specializare) {
+        Specializari.add(specializare);
+    }
     public void adaugaSpecializare(Specializare specializare) {
         Specializari.add(specializare);
     }
@@ -106,11 +112,12 @@ public class Facultate {
             System.out.println("-------------------");
         }
     }
-
     public void afiseazaSpecializari() {
         for (Specializare specializare : Specializari) {
             System.out.println(specializare.toString());
             System.out.println("-------------------");
         }
     }
+
+
 }

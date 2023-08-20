@@ -2,17 +2,17 @@ import java.util.List;
 import java.util.Objects;
 
 public class Student extends Persoana{
-    private String Nume;
-    private String Prenume;
+    String Nume;
+    String Prenume;
     private String Adresa;
     private String Email;
     private int NrMatricol;
     private int AnStudiu;
     private String Specializare;
-    private float MedieAdmitere;
-    private List<NotaCurs> NotaCursuri;
+    private double MedieAdmitere;
+    List<NotaCurs> NotaCursuri;
 
-    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, float medieAdmitere, List<NotaCurs> notaCursuri) {
+    public Student(String nume, String prenume, String adresa, String email, int nrMatricol, int anStudiu, String specializare, double medieAdmitere, List<NotaCurs> notaCursuri) {
         Nume = nume;
         Prenume = prenume;
         Adresa = adresa;
@@ -88,11 +88,11 @@ public class Student extends Persoana{
         Specializare = specializare;
     }
 
-    public float getMedieAdmitere() {
+    public double getMedieAdmitere() {
         return MedieAdmitere;
     }
 
-    public void setMedieAdmitere(float medieAdmitere) {
+    public void setMedieAdmitere(double medieAdmitere) {
         MedieAdmitere = medieAdmitere;
     }
 
@@ -124,11 +124,15 @@ public class Student extends Persoana{
         if (this == o) return true;
         if (!(o instanceof Student student)) return false;
         if (!super.equals(o)) return false;
-        return getNrMatricol() == student.getNrMatricol() && getAnStudiu() == student.getAnStudiu() && Float.compare(student.getMedieAdmitere(), getMedieAdmitere()) == 0 && Objects.equals(getNume(), student.getNume()) && Objects.equals(getPrenume(), student.getPrenume()) && Objects.equals(getAdresa(), student.getAdresa()) && Objects.equals(getEmail(), student.getEmail()) && Objects.equals(getSpecializare(), student.getSpecializare()) && Objects.equals(getNotaCursuri(), student.getNotaCursuri());
+        return getNrMatricol() == student.getNrMatricol() && getAnStudiu() == student.getAnStudiu() && Double.compare(student.getMedieAdmitere(), getMedieAdmitere()) == 0 && Objects.equals(getNume(), student.getNume()) && Objects.equals(getPrenume(), student.getPrenume()) && Objects.equals(getAdresa(), student.getAdresa()) && Objects.equals(getEmail(), student.getEmail()) && Objects.equals(getSpecializare(), student.getSpecializare()) && Objects.equals(getNotaCursuri(), student.getNotaCursuri());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getNume(), getPrenume(), getAdresa(), getEmail(), getNrMatricol(), getAnStudiu(), getSpecializare(), getMedieAdmitere(), getNotaCursuri());
     }
+    public void adaugaNotaCurs(NotaCurs notaCurs) {
+        NotaCursuri.add(notaCurs);
+    }
+
 }

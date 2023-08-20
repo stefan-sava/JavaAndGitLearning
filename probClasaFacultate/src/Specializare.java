@@ -3,7 +3,7 @@ import java.util.*;
 public class Specializare {
     private int IdSpecializare;
     private String Denumire;
-    private List<Curs> Cursuri;
+    List<Curs> Cursuri;
     private CadruDidactic Responsabil;
 
     public Specializare(int idSpecializare, String denumire, List<Curs> cursuri, CadruDidactic responsabil) {
@@ -43,5 +43,16 @@ public class Specializare {
 
     public void setResponsabil(CadruDidactic responsabil) {
         Responsabil = responsabil;
+    }
+
+    public void adaugaCurs(Curs curs) {
+        Cursuri.add(curs);
+    }
+
+    public void afiseazaCursuri() {
+        for (Curs curs : Cursuri) {
+            System.out.println(curs.toString());
+            System.out.println("-------------------");
+        }
     }
 }

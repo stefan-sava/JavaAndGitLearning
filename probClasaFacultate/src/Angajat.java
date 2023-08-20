@@ -1,18 +1,18 @@
-import java.util.Objects;
-
 public abstract class Angajat extends Persoana{
     String Nume;
     String Prenume;
     String Adresa;
     String Email;
-    int Salariu;
-    int Vechime;
+    double Salariu;
+    double Vechime;
 
-    public abstract int getSalariu();
+    public abstract double getSalariu();
 
-    public abstract void setSalariu(int Salariu);
+    public abstract void setSalariu(double Salariu);
 
-    public abstract int getVechime();
+    public abstract double getVechime();
 
-    public abstract void setVechime(int Vechime);
+    public abstract void setVechime(double Vechime);
+
+
 }

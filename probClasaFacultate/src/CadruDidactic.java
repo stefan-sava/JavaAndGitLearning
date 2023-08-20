@@ -5,11 +5,11 @@ public class CadruDidactic extends Angajat{
     private String Prenume;
     private String Adresa;
     private String Email;
-    private int Salariu;
-    private int Vechime;
+    private double Salariu;
+    private double Vechime;
     private String Titulatura;
 
-    public CadruDidactic(String nume, String prenume, String adresa, String email, int salariu, int vechime, String titulatura) {
+    public CadruDidactic(String nume, String prenume, String adresa, String email, double salariu, double vechime, String titulatura) {
         Nume = nume;
         Prenume = prenume;
         Adresa = adresa;
@@ -67,6 +67,27 @@ public class CadruDidactic extends Angajat{
         Titulatura = titulatura;
     }
 
+
+    @Override
+    public double getSalariu() {
+        return Salariu;
+    }
+
+    @Override
+    public void setSalariu(double salariu) {
+        Salariu = salariu;
+    }
+
+    @Override
+    public double getVechime() {
+        return Vechime;
+    }
+
+    @Override
+    public void setVechime(double Vechime) {
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,23 +114,5 @@ public class CadruDidactic extends Angajat{
                 '}';
     }
 
-    @Override
-    public int getSalariu() {
-        return 0;
-    }
 
-    @Override
-    public void setSalariu(int Salariu) {
-
-    }
-
-    @Override
-    public int getVechime() {
-        return 0;
-    }
-
-    @Override
-    public void setVechime(int Vechime) {
-
-    }
 }

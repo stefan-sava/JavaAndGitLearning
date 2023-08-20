@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Curs {
-    private int CursId;
-    private String Denumire;
+    int CursId;
+    String Denumire;
     private String Titular;
 
     public Curs(int cursId, String denumire, String titular) {
