@@ -1,16 +1,18 @@
-import java.util.List;
+import java.util.*;
 
 public class Facultate {
 
     private String Denumire;
+    String Adresa, Email;
     private List Contact;
-    private List Specializari;
-    private List Angajati;
-    private List Studenti;
+    private List<Specializare> Specializari;
+    private List<Angajat> Angajati;
+    private List<Student> Studenti;
 
     public Facultate(String denumire, List contact, List specializari, List angajati, List studenti) {
         Denumire = denumire;
-        Contact = contact;
+        Contact.add(Adresa);
+        Contact.add(Email);
         Specializari = specializari;
         Angajati = angajati;
         Studenti = studenti;
@@ -67,5 +69,48 @@ public class Facultate {
                 '}';
     }
 
+    //Pentru a adauga la facultate
+    public void adaugaSpecializare(Specializare specializare) {
+        Specializari.add(specializare);
+    }
 
+    public void adaugaAngajat(Angajat angajat) {
+        Angajati.add(angajat);
+    }
+
+    public void adaugaStudent(Student student) {
+        Studenti.add(student);
+    }
+
+    public void stergeSpecializare(Specializare specializare) {
+        Specializari.remove(specializare);
+    }
+
+    public void stergeAngajat(Angajat angajat) {
+        Angajati.remove(angajat);
+    }
+
+    public void stergeStudent(Student student) {
+        Studenti.remove(student);
+    }
+
+    public void afiseazaAngajati() {
+        for (Angajat angajat : Angajati) {
+            System.out.println(angajat.toString());
+            System.out.println("-------------------");
+        }
+    }
+    public void afiseazaStudenti() {
+        for (Student student : Studenti) {
+            System.out.println(student.toString());
+            System.out.println("-------------------");
+        }
+    }
+
+    public void afiseazaSpecializari() {
+        for (Specializare specializare : Specializari) {
+            System.out.println(specializare.toString());
+            System.out.println("-------------------");
+        }
+    }
 }
